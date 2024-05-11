@@ -1,70 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
-        <link rel="stylesheet" href="./style.css" />
-    </head>
-    <body>
-        <main>
-            <header>CHASHARE</header>
-            <div id="main-title">
-                <div>
-                    <div class="main-title-top">Car-Sharing Experience</div>
-                    <br />
-                    <div class="main-title-bottom">Wherever You Need,</div>
-                    <div class="main-title-bottom">Whenever You Need</div>
-                    <div id="apply-section">
-                        <button onclick="document.getElementById('typeform-container').scrollIntoView({ behavior: 'smooth' });">Apply Now</button>
-                    </div>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+    <main>
+        <header>CHASHARE</header>
+        <div id="main-title">
+            <div>
+                <div class="main-title-top">Car-Sharing Experience</div>
+                <br />
+                <div class="main-title-bottom">Wherever You Need,</div>
+                <div class="main-title-bottom">Whenever You Need</div>
+                <div id="apply-now-button">
+                    <button onclick="scrollToTypeform()">Apply Now</button>
                 </div>
             </div>
-        </main>
-        <section id="sec1">
-            <div class="sec-title">24 Hours Service<span class="dot">.</span></div>
-            <div class="sec-text-wrap">
-                <div class="sec-text">Middle of the night? Weekends?</div>
-                <div class="sec-text">No problem!</div>
-                <div class="sec-text">ChaShare got your back!</div>
-            </div>
-            <img class="sec-img" src="./img/sec1.jpg" alt="sec1" />
-        </section>
-        <section id="sec2">
-            <div class="sec-title">Wherever You Want<span class="dot">.</span></div>
-            <div class="sec-text-wrap">
-                <div class="sec-text">Find cars that are within 5 minutes from</div>
-                <div class="sec-text">your location.</div>
-                <div class="sec-text">Or request the car to be delivered to you!</div>
-            </div>
-            <img class="sec-img" src="./img/sec2.jpg" alt="sec2" />
-        </section>
-        <section id="sec3">
-            <div class="sec-title">As Long As You Want<span class="dot">.</span></div>
-            <div class="sec-text-wrap">
-                <div class="sec-text">From daily activities to special occasions</div>
-                <div class="sec-text">Rent cars for any cases!</div>
-            </div>
-            <img class="sec-img" src="./img/sec3.jpg" alt="sec3" />
-        </section>
-        <section id="sec4">
-            <div class="sec-title">Multiple Options Available<span class="dot">.</span></div>
-            <div class="sec-text-wrap">
-                <div class="sec-text">Car for family? Date? Friends?</div>
-                <div class="sec-text">We got you covered!</div>
-                <div class="sec-text">Pick one from our 50+ car collections.</div>
-            </div>
-            <img class="sec-img" src="./img/sec4.jpg" alt="sec4" />
-        </section>
-        <div id="footer-top">
-            <div><span class="dot">100,000+</span> users are actively</div>
-            <div>using <span class="dot">ChaShare</span></div>
-            <div>Join Our Journey</div>
         </div>
+    </main>
+    <section id="sec1">
+        <div class="sec-title">24 Hours Service<span class="dot">.</span></div>
+        <div class="sec-text-wrap">
+            <div class="sec-text">Middle of the night? Weekends?</div>
+            <div class="sec-text">No problem!</div>
+            <div class="sec-text">ChaShare got your back!</div>
+        </div>
+        <img class="sec-img" src="./img/sec1.jpg" alt="sec1" />
+    </section>
+    <section id="sec2">
+        <div class="sec-title">Wherever You Want<span class="dot">.</span></div>
+        <div class="sec-text-wrap">
+            <div class="sec-text">Find cars that are within 5 minutes from</div>
+            <div class="sec-text">your location.</div>
+            <div class="sec-text">Or request the car to be delivered to you!</div>
+        </div>
+        <img class="sec-img" src="./img/sec2.jpg" alt="sec2" />
+    </section>
+    <section id="sec3">
+        <div class="sec-title">As Long As You Want<span class="dot">.</span></div>
+        <div class="sec-text-wrap">
+            <div class="sec-text">From daily activities to special occasions</div>
+            <div class="sec-text">Rent cars for any cases!</div>
+        </div>
+        <img class="sec-img" src="./img/sec3.jpg" alt="sec3" />
+    </section>
+    <section id="sec4">
+        <div class="sec-title">Multiple Options Available<span class="dot">.</span></div>
+        <div class="sec-text-wrap">
+            <div class="sec-text">Car for family? Date? Friends?</div>
+            <div class="sec-text">We got you covered!</div>
+            <div class="sec-text">Pick one from our 50+ car collections.</div>
+        </div>
+        <img class="sec-img" src="./img/sec4.jpg" alt="sec4" />
+    </section>
+    <div id="footer-top">
+        <div><span class="dot">100,000+</span> users are actively</div>
+        <div>using <span class="dot">ChaShare</span></div>
+        <div>Join Our Journey</div>
+    </div>
 
-        <div id="typeform-container">
-            <div data-tf-live="01HXKDKN7906553YWZF0ND874H"></div>
-            <script src="//embed.typeform.com/next/embed.js"></script>
-        </div>
-    </body>
+    <div id="typeform-container">
+        <div data-tf-live="01HXKDKN7906553YWZF0ND874H"></div>
+        <script src="//embed.typeform.com/next/embed.js"></script>
+    </div>
+
+    <script>
+    function scrollToTypeform() {
+        var typeformSection = document.getElementById('typeform-container');
+        if (typeformSection) {
+            typeformSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    }
+    </script>
+</body>
 </html>
